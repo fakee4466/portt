@@ -2,95 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Portfolio Design System - ResuMate Template
+All colors MUST be HSL. Font imports and variables.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
+    /* Page & Surface Colors */
+    --bg: 0 0% 2%; /* #050505 - near-black page background */
+    --surface: 0 0% 6%; /* #0f0f10 - panel surface */
+    --card: 0 0% 7%; /* #111217 - card background with subtle gradient overlay */
+    --card-gradient: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+    
+    /* Border & Dividers */
+    --border: 0 0% 100% / 0.04; /* rgba(255,255,255,0.04) - soft translucent border */
+    --divider: 0 0% 100% / 0.08; /* slightly more visible divider */
+    
+    /* Typography Colors */
+    --text: 0 0% 100%; /* #ffffff - primary text */
+    --text-heading: 0 0% 100% / 0.95; /* slightly softer for large headings */
+    --text-muted: 0 0% 100% / 0.6; /* rgba(255,255,255,0.6) - secondary/muted text */
+    --text-placeholder: 0 0% 100% / 0.4; /* form placeholders */
+    
+    /* Accent Colors */
+    --accent: 152 85% 52%; /* #22e07a - mint green primary accent */
+    --accent-dot: 148 85% 55%; /* #26d77a - slightly different for status dots */
+    --accent-soft: 152 85% 52% / 0.18; /* accent with low opacity for focus states */
+    
+    /* Interactive States */
+    --hover-lift: 0 20px 40px rgba(0,0,0,0.4); /* card hover shadow */
+    --card-shadow: 0 6px 30px rgba(0,0,0,0.6); /* default card shadow */
+    --focus-ring: 3px solid hsl(var(--accent-soft)); /* keyboard focus outline */
+    
+    /* Form Elements */
+    --input-bg: 0 0% 100% / 0.02; /* rgba(255,255,255,0.02) */
+    --input-border: var(--border);
+    
+    /* Status & Badges */
+    --badge-bg: 0 0% 100% / 0.03; /* status pill background */
+    --pill-bg: 0 0% 100% / 0.02; /* general pill background */
+    
+    /* Typography Scale */
+    --font-heading: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    
+    /* Spacing System - 8px base unit */
+    --space-1: 0.5rem; /* 8px */
+    --space-2: 1rem;   /* 16px */
+    --space-3: 1.5rem; /* 24px */
+    --space-4: 2rem;   /* 32px */
+    --space-5: 2.5rem; /* 40px */
+    --space-7: 3.5rem; /* 56px */
+    --space-9: 4.5rem; /* 72px */
+    
+    /* Border Radius System */
+    --radius-sm: 0.75rem; /* 12px - small elements */
+    --radius-md: 0.875rem; /* 14px - cards */
+    --radius-lg: 1rem;    /* 16px - larger cards */
+    --radius-xl: 1.125rem; /* 18px - inner image corners */
+    --radius-2xl: 2.25rem; /* 36px - main profile card */
+    
+    /* Layout Dimensions */
+    --profile-width: 22.5rem; /* 360px - left profile card */
+    --profile-min: 20rem;     /* 320px - minimum width */
+    --profile-max: 23.75rem;  /* 380px - maximum width */
+    --content-max: 68.75rem;  /* 1100px - right content max-width */
+    
+    /* Animation Easing */
+    --ease-smooth: cubic-bezier(.22,.9,.2,1);
+    
+    /* Legacy shadcn mappings for compatibility */
+    --background: var(--bg);
+    --foreground: var(--text);
+    --primary: var(--accent);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--surface);
+    --secondary-foreground: var(--text);
+    --muted: var(--surface);
+    --muted-foreground: var(--text-muted);
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive-foreground: 0 0% 100%;
+    --popover: var(--card);
+    --popover-foreground: var(--text);
+    --card-foreground: var(--text);
+    --accent-foreground: 0 0% 100%;
+    --input: var(--input-border);
+    --ring: var(--accent);
+    --radius: var(--radius-sm);
   }
 }
 
@@ -100,6 +100,105 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply font-body text-[hsl(var(--text))] bg-[hsl(var(--bg))] antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus management for accessibility */
+  :focus {
+    outline: none;
+  }
+  
+  :focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 2px;
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Custom Animation Keyframes */
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes count-up {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation utilities */
+  .animate-fade-up {
+    animation: fade-up 0.6s var(--ease-smooth) both;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s var(--ease-smooth) both;
+  }
+  
+  .animate-delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .animate-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animate-delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  /* Hover effects */
+  .hover-lift {
+    transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--hover-lift);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s var(--ease-smooth);
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.06);
   }
 }

@@ -1,0 +1,97 @@
+{
+  "profile": {
+    "name": "John Anderson",
+    "status": "Available for work",
+    "titleLines": ["I'm John Anderson,", "Framer DI", "Based in Los Angeles, CA."],
+    "about": "I specialize in creating clean, user-friendly digital experiences by blending creativity with functionality. With a strong background in interactive design, I focus on crafting designs that not only look great but also provide smooth and engaging user interactions, helping ideas come to life seamlessly.",
+    "photo": "src/assets/profile-600.webp",
+    "social": [
+      { "name": "instagram", "url": "#", "aria": "Instagram" },
+      { "name": "twitter", "url": "#", "aria": "Twitter" },
+      { "name": "youtube", "url": "#", "aria": "YouTube" },
+      { "name": "dribbble", "url": "#", "aria": "Dribbble" },
+      { "name": "behance", "url": "#", "aria": "Behance" }
+    ],
+    "cvUrl": "assets/john-anderson-cv.pdf"
+  },
+  "stats": [
+    { "value": "30+", "label": "Completed Projects" },
+    { "value": "8+", "label": "Years of Experience" },
+    { "value": "36+", "label": "Happy Clients" },
+    { "value": "10+", "label": "Awards Received" }
+  ],
+  "experience": [
+    {
+      "title": "Framer & UI/UX Designer",
+      "company": "Circlum Tech",
+      "range": "2023 - Present",
+      "logo": "assets/circlum-logo-48.png",
+      "description": "Designing interactive prototypes with Framer, focusing on seamless user experiences and scalable solutions through user feedback and collaboration."
+    },
+    {
+      "title": "UI/UX Designer",
+      "company": "CoreOS",
+      "range": "2021 - 2023",
+      "logo": "assets/coreos-logo-48.png",
+      "description": "Created intuitive web and mobile designs, conducted user research, and collaborated with developers to ensure consistent and functional design delivery."
+    },
+    {
+      "title": "Graphics Designer",
+      "company": "Pixel Square",
+      "range": "2020 - 2021",
+      "logo": "assets/pixelsquare-logo-48.png",
+      "description": "Designed marketing assets, UI components, and brand visuals."
+    }
+  ],
+  "projects": [
+    { 
+      "title": "HelloBot", 
+      "category": "SaaS & Startup", 
+      "pages": "8 Pages", 
+      "thumb": "src/assets/projects/hellobot-1200.webp" 
+    },
+    { 
+      "title": "Flexisoft", 
+      "category": "SaaS & Startup", 
+      "pages": "6 Pages", 
+      "thumb": "src/assets/projects/flexisoft-1200.webp" 
+    },
+    { 
+      "title": "Excludia", 
+      "category": "Digital Agency", 
+      "pages": "8 Pages", 
+      "thumb": "src/assets/projects/excludia-1200.webp" 
+    },
+    { 
+      "title": "CryptoraHub", 
+      "category": "Crypto & Web3", 
+      "pages": "7 Pages", 
+      "thumb": "src/assets/projects/cryptorahub-1200.webp" 
+    }
+  ],
+  "education": [
+    { 
+      "title": "UI/UX Design Certification", 
+      "institution": "Interaction Design Foundation", 
+      "range": "2018 - 2019", 
+      "description": "Gained hands-on experience in UX research, prototyping, wireframing, and usability testing." 
+    },
+    { 
+      "title": "Bachelor of Design in Interaction Design", 
+      "institution": "National University of Singapore", 
+      "range": "2015 - 2017", 
+      "description": "Completed a comprehensive program focused on designing user-centered digital products." 
+    }
+  ],
+  "tools": [
+    { "name": "Figma", "desc": "Design Tool", "icon": "assets/tools/figma.svg" }, 
+    { "name": "Framer", "desc": "No Code Development", "icon": "assets/tools/framer.svg" }, 
+    { "name": "Notion", "desc": "Notion", "icon": "assets/tools/notion.svg" }, 
+    { "name": "Illustrators", "desc": "Illustrators", "icon": "assets/tools/ai.svg" }
+  ],
+  "contact": { 
+    "phone": "+(02) 4057 2930", 
+    "email": "ANDREW@WEBSITE.COM", 
+    "address": "Beverly Hills, Los Angeles, California, USA" 
+  }
+}

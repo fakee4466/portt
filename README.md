@@ -1,73 +1,183 @@
-# Welcome to your Lovable project
+# Portfolio Template - ResuMate Style
 
-## Project info
+A pixel-perfect, responsive portfolio template built with React, TypeScript, and Tailwind CSS. This template replicates the beautiful ResuMate design with a dark theme and smooth animations.
 
-**URL**: https://lovable.dev/projects/94b8c206-d765-4e62-a129-c026bedebddc
+## ✨ Features
 
-## How can I edit this code?
+- **Responsive Design**: Perfect on desktop, tablet, and mobile
+- **Dark Theme**: Beautiful dark color scheme with mint green accents  
+- **Interactive Animations**: Smooth hover effects and scroll-triggered animations
+- **Content-Driven**: All content loaded from JSON data file
+- **Accessible**: Semantic HTML, keyboard navigation, screen reader support
+- **Performance Optimized**: Lazy loading, WebP images, smooth animations
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+```bash
+# Install dependencies
+npm install
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/94b8c206-d765-4e62-a129-c026bedebddc) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## 📁 Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+src/
+├── assets/                 # Images and static assets
+│   ├── profile-600.webp   # Profile photo
+│   └── projects/          # Project thumbnails
+├── components/            # React components
+│   ├── ProfileCard.tsx    # Left sidebar profile
+│   ├── Hero.tsx          # Hero section with title
+│   ├── StatsRow.tsx      # Statistics counter row
+│   ├── ExperienceSection.tsx
+│   ├── ProjectsGrid.tsx  # Projects showcase
+│   ├── EducationSection.tsx
+│   ├── ToolsGrid.tsx     # Skills/tools grid
+│   ├── ContactSection.tsx # Contact form
+│   └── Footer.tsx        # Site footer
+├── data.json             # Content data file
+└── pages/Index.tsx       # Main page layout
+```
 
-**Use GitHub Codespaces**
+## 🎨 Customization
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 1. Replace Profile Content
 
-## What technologies are used for this project?
+Edit `src/data.json` to update:
 
-This project is built with:
+```json
+{
+  "profile": {
+    "name": "Your Name",
+    "status": "Available for work",
+    "titleLines": ["I'm Your Name,", "Your Title", "Based in Your Location"],
+    "about": "Your bio description...",
+    "social": [...],
+    "cvUrl": "path/to/your/cv.pdf"
+  }
+}
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 2. Update Profile Photo
 
-## How can I deploy this project?
+Replace `src/assets/profile-600.webp` with your photo:
+- **Recommended size**: 600x600px
+- **Format**: WebP for best performance, JPEG fallback
+- **Aspect ratio**: Square (1:1)
 
-Simply open [Lovable](https://lovable.dev/projects/94b8c206-d765-4e62-a129-c026bedebddc) and click on Share -> Publish.
+### 3. Add Your Projects
 
-## Can I connect a custom domain to my Lovable project?
+Update the projects array in `data.json` and add project thumbnails to `src/assets/projects/`:
+- **Recommended size**: 1200x750px (16:10 aspect ratio)
+- **Format**: WebP preferred
+- **Naming**: Use descriptive filenames
 
-Yes, you can!
+### 4. Customize Colors & Theme
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The design system is defined in `src/index.css`. Update CSS variables:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```css
+:root {
+  --accent: 152 85% 52%;     /* Change primary accent color */
+  --bg: 0 0% 2%;             /* Page background */
+  --text: 0 0% 100%;         /* Primary text color */
+  --text-muted: 0 0% 100% / 0.6; /* Secondary text */
+}
+```
+
+### 5. Typography Customization
+
+Fonts are configured in `src/index.css`:
+
+```css
+--font-heading: "Poppins", system-ui, sans-serif;
+--font-body: "Inter", system-ui, sans-serif;
+```
+
+Update the Google Fonts import in `index.html` if changing fonts.
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px (single column)
+- **Tablet**: 768px - 1024px (narrow left column) 
+- **Desktop**: > 1024px (two-column layout)
+- **Large**: > 1200px (optimized spacing)
+
+## ♿ Accessibility Features
+
+- Semantic HTML structure (`<main>`, `<section>`, `<aside>`)
+- Keyboard navigation support
+- Screen reader compatible
+- Color contrast compliance
+- Focus management
+- Alt text for all images
+- ARIA labels for interactive elements
+
+## 🎭 Animation Features
+
+- **Page Load**: Staggered fade-up animations
+- **Stats Counter**: Count-up animation on scroll
+- **Hover Effects**: Card lifts, button scales
+- **Reduced Motion**: Respects user preferences
+
+## 🔧 Technical Details
+
+- **Framework**: React 18 + TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Icons**: Lucide React
+- **Animations**: CSS-based with Intersection Observer
+- **Images**: Responsive with srcset support
+- **Forms**: Accessible with validation
+
+## 📞 Contact Form
+
+The contact form includes client-side validation and shows success messages. To add backend functionality:
+
+1. Update the `handleSubmit` function in `ContactSection.tsx`
+2. Add your email service endpoint
+3. Handle form validation server-side
+
+## 🚀 Deployment
+
+This template works with any static hosting service:
+
+- **Vercel**: Connect GitHub repo for auto-deploy
+- **Netlify**: Drag & drop the `dist` folder
+- **GitHub Pages**: Use GitHub Actions
+- **Traditional hosting**: Upload `dist` folder contents
+
+## 📄 Browser Support
+
+- **Modern browsers**: Chrome 90+, Firefox 90+, Safari 14+, Edge 90+
+- **Mobile**: iOS Safari 14+, Android Chrome 90+
+- **Graceful degradation**: Older browsers get simplified experience
+
+## 🎯 Performance Optimizations
+
+- Lazy loading for images
+- WebP format with JPEG fallbacks  
+- CSS-based animations (GPU accelerated)
+- Minimal JavaScript bundle
+- Efficient CSS with utility-first approach
+
+## 📝 License
+
+This template is free to use for personal and commercial projects. Attribution appreciated but not required.
+
+## 🆘 Support
+
+For questions or issues:
+1. Check the browser console for errors
+2. Verify all image paths in `data.json` 
+3. Ensure proper image formats and sizes
+4. Test responsive design at different screen sizes
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS.
