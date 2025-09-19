@@ -1,183 +1,190 @@
-# Portfolio Template - ResuMate Style
+# Sanskruti Mhatre - Portfolio
 
-A pixel-perfect, responsive portfolio template built with React, TypeScript, and Tailwind CSS. This template replicates the beautiful ResuMate design with a dark theme and smooth animations.
+A pixel-perfect, fully responsive portfolio website built with React, TypeScript, and modern CSS. Features a dark theme with smooth animations, sticky sidebar, and dynamic content loading.
 
 ## ✨ Features
 
-- **Responsive Design**: Perfect on desktop, tablet, and mobile
-- **Dark Theme**: Beautiful dark color scheme with mint green accents  
-- **Interactive Animations**: Smooth hover effects and scroll-triggered animations
-- **Content-Driven**: All content loaded from JSON data file
-- **Accessible**: Semantic HTML, keyboard navigation, screen reader support
-- **Performance Optimized**: Lazy loading, WebP images, smooth animations
+- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **Dark Theme**: Modern dark UI with subtle gradients and glows
+- **Smooth Animations**: Count-up statistics, scroll-triggered reveals, and hover effects
+- **Sticky Sidebar**: Fixed profile card on desktop with responsive behavior
+- **Dynamic Content**: Fully content-driven via JSON data file
+- **Accessible**: WCAG compliant with proper ARIA labels and keyboard navigation
+- **Performance Optimized**: Lazy loading images with responsive srcsets
 
 ## 🚀 Quick Start
 
-```bash
-# Install dependencies
-npm install
+1. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-# Start development server
-npm run dev
+2. **Start development server**:
+   ```bash
+   npm run dev
+   ```
 
-# Build for production
-npm run build
-```
+3. **Build for production**:
+   ```bash
+   npm run build
+   ```
 
-## 📁 Project Structure
+## 📝 Customization
 
-```
-src/
-├── assets/                 # Images and static assets
-│   ├── profile-600.webp   # Profile photo
-│   └── projects/          # Project thumbnails
-├── components/            # React components
-│   ├── ProfileCard.tsx    # Left sidebar profile
-│   ├── Hero.tsx          # Hero section with title
-│   ├── StatsRow.tsx      # Statistics counter row
-│   ├── ExperienceSection.tsx
-│   ├── ProjectsGrid.tsx  # Projects showcase
-│   ├── EducationSection.tsx
-│   ├── ToolsGrid.tsx     # Skills/tools grid
-│   ├── ContactSection.tsx # Contact form
-│   └── Footer.tsx        # Site footer
-├── data.json             # Content data file
-└── pages/Index.tsx       # Main page layout
-```
+### Updating Content
 
-## 🎨 Customization
+Edit `public/data.json` to customize:
 
-### 1. Replace Profile Content
+- **Profile Information**: Name, photo, status, social links
+- **Hero Section**: Title lines, about text, contact info
+- **Statistics**: Update counters with your achievements  
+- **Experience**: Add your work history with company logos
+- **Projects**: Showcase your portfolio with project thumbnails
+- **Education**: List your educational background
+- **Tools & Skills**: Display your technical expertise
+- **Contact Information**: Update phone, email, and address
 
-Edit `src/data.json` to update:
+### Changing Images
 
-```json
-{
-  "profile": {
-    "name": "Your Name",
-    "status": "Available for work",
-    "titleLines": ["I'm Your Name,", "Your Title", "Based in Your Location"],
-    "about": "Your bio description...",
-    "social": [...],
-    "cvUrl": "path/to/your/cv.pdf"
-  }
-}
-```
+Replace image URLs in `data.json` with your own:
 
-### 2. Update Profile Photo
+- **Profile Photo**: 600x600px, square crop recommended
+- **Company Logos**: 48x48px, square format
+- **Project Thumbnails**: 1200x800px, 16:10 aspect ratio recommended
 
-Replace `src/assets/profile-600.webp` with your photo:
-- **Recommended size**: 600x600px
-- **Format**: WebP for best performance, JPEG fallback
-- **Aspect ratio**: Square (1:1)
+### Customizing Theme
 
-### 3. Add Your Projects
-
-Update the projects array in `data.json` and add project thumbnails to `src/assets/projects/`:
-- **Recommended size**: 1200x750px (16:10 aspect ratio)
-- **Format**: WebP preferred
-- **Naming**: Use descriptive filenames
-
-### 4. Customize Colors & Theme
-
-The design system is defined in `src/index.css`. Update CSS variables:
+Modify CSS variables in `src/react-app/index.css`:
 
 ```css
 :root {
-  --accent: 152 85% 52%;     /* Change primary accent color */
-  --bg: 0 0% 2%;             /* Page background */
-  --text: 0 0% 100%;         /* Primary text color */
-  --text-muted: 0 0% 100% / 0.6; /* Secondary text */
+  /* Colors */
+  --bg: #050505;              /* Page background */
+  --surface: #0f0f10;         /* Surface color */
+  --card: #111217;            /* Card backgrounds */
+  --border: rgba(255,255,255,0.04); /* Subtle borders */
+  --text: #ffffff;            /* Primary text */
+  --muted: rgba(255,255,255,0.6);   /* Secondary text */
+  --accent: #22e07a;          /* Accent green */
+  
+  /* Typography */
+  --font-heading: "Poppins", system-ui; /* Heading font */
+  --font-body: "Inter", system-ui;      /* Body font */
+  
+  /* Layout */
+  --sidebar-width: 360px;     /* Desktop sidebar width */
+  --content-max: 1100px;      /* Max content width */
 }
 ```
 
-### 5. Typography Customization
+### Adding New Sections
 
-Fonts are configured in `src/index.css`:
-
-```css
---font-heading: "Poppins", system-ui, sans-serif;
---font-body: "Inter", system-ui, sans-serif;
-```
-
-Update the Google Fonts import in `index.html` if changing fonts.
+1. Create component in `src/react-app/components/`
+2. Add data structure to `usePortfolioData.ts` hook
+3. Update `data.json` with new content
+4. Import and use in `src/react-app/pages/Home.tsx`
 
 ## 📱 Responsive Breakpoints
 
-- **Mobile**: < 768px (single column)
-- **Tablet**: 768px - 1024px (narrow left column) 
-- **Desktop**: > 1024px (two-column layout)
-- **Large**: > 1200px (optimized spacing)
+- **Desktop**: 1200px+ (two-column layout with sticky sidebar)
+- **Tablet**: 768px - 1199px (narrower sidebar, adapted spacing)
+- **Mobile**: <768px (single column, profile card moves to top)
 
 ## ♿ Accessibility Features
 
-- Semantic HTML structure (`<main>`, `<section>`, `<aside>`)
-- Keyboard navigation support
-- Screen reader compatible
-- Color contrast compliance
-- Focus management
+- Semantic HTML structure (`header`, `main`, `aside`, `section`)
+- Proper heading hierarchy (H1, H2, H3)
 - Alt text for all images
 - ARIA labels for interactive elements
+- Keyboard navigation support
+- Focus indicators for keyboard users
+- Reduced motion support via `prefers-reduced-motion`
 
-## 🎭 Animation Features
+## 🎨 Design System
 
-- **Page Load**: Staggered fade-up animations
-- **Stats Counter**: Count-up animation on scroll
-- **Hover Effects**: Card lifts, button scales
-- **Reduced Motion**: Respects user preferences
+### Color Palette
+- **Background**: Near-black (#050505) for deep contrast
+- **Cards**: Dark gray (#111217) with subtle gradients
+- **Accent**: Mint green (#22e07a) for CTAs and highlights
+- **Text**: White with opacity variations for hierarchy
+
+### Typography
+- **Headings**: Poppins (300, 400, 600, 700, 800)
+- **Body**: Inter (400, 500, 600, 700)
+- **Responsive scaling**: Clamp functions for fluid typography
+
+### Spacing
+- **Base unit**: 8px
+- **Scale**: 8, 16, 24, 32, 40, 56, 72px
+- **Consistent rhythm**: Maintains visual harmony across components
 
 ## 🔧 Technical Details
 
-- **Framework**: React 18 + TypeScript
-- **Styling**: Tailwind CSS with custom design system
-- **Icons**: Lucide React
-- **Animations**: CSS-based with Intersection Observer
-- **Images**: Responsive with srcset support
-- **Forms**: Accessible with validation
+### Built With
+- **React 19** - Modern React with latest features
+- **TypeScript** - Type-safe development
+- **CSS Variables** - Easy theme customization
+- **Intersection Observer** - Scroll-triggered animations
+- **Modern CSS** - Grid, Flexbox, custom properties
 
-## 📞 Contact Form
+### Performance Optimizations
+- Lazy loading images with `loading="lazy"`
+- Responsive images with `srcset`
+- Optimized animations with `cubic-bezier` easing
+- Minimal JavaScript for smooth performance
 
-The contact form includes client-side validation and shows success messages. To add backend functionality:
+### Browser Support
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Fallbacks for older browsers where needed
+- Progressive enhancement approach
 
-1. Update the `handleSubmit` function in `ContactSection.tsx`
-2. Add your email service endpoint
-3. Handle form validation server-side
+## 📄 File Structure
 
-## 🚀 Deployment
+```
+src/
+├── react-app/
+│   ├── components/         # Reusable UI components
+│   │   ├── ProfileCard.tsx
+│   │   ├── Hero.tsx
+│   │   ├── StatsRow.tsx
+│   │   ├── ExperienceSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── EducationSection.tsx
+│   │   ├── ToolsSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── Footer.tsx
+│   ├── hooks/             # Custom React hooks
+│   │   ├── usePortfolioData.ts
+│   │   └── useAnimations.ts
+│   ├── pages/            # Page components
+│   │   └── Home.tsx
+│   ├── App.tsx           # Main app component
+│   ├── main.tsx          # App entry point
+│   └── index.css         # Global styles
+├── public/
+│   └── data.json         # Portfolio content data
+└── README.md             # This file
+```
 
-This template works with any static hosting service:
+## 🤝 Contributing
 
-- **Vercel**: Connect GitHub repo for auto-deploy
-- **Netlify**: Drag & drop the `dist` folder
-- **GitHub Pages**: Use GitHub Actions
-- **Traditional hosting**: Upload `dist` folder contents
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Browser Support
+## 📧 Support
 
-- **Modern browsers**: Chrome 90+, Firefox 90+, Safari 14+, Edge 90+
-- **Mobile**: iOS Safari 14+, Android Chrome 90+
-- **Graceful degradation**: Older browsers get simplified experience
+For support and questions:
+- Open an issue on GitHub
+- Check the documentation above
+- Review the code comments for implementation details
 
-## 🎯 Performance Optimizations
+## 📄 License
 
-- Lazy loading for images
-- WebP format with JPEG fallbacks  
-- CSS-based animations (GPU accelerated)
-- Minimal JavaScript bundle
-- Efficient CSS with utility-first approach
-
-## 📝 License
-
-This template is free to use for personal and commercial projects. Attribution appreciated but not required.
-
-## 🆘 Support
-
-For questions or issues:
-1. Check the browser console for errors
-2. Verify all image paths in `data.json` 
-3. Ensure proper image formats and sizes
-4. Test responsive design at different screen sizes
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
 
-Built with ❤️ using React, TypeScript, and Tailwind CSS.
+**Sanskruti Mhatre Portfolio** - Crafted with care for a professional online presence.
