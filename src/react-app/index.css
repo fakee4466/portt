@@ -8,17 +8,17 @@
 /* Load Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-/* CSS Variables for Dark Theme - Premium Modern Design */
+/* CSS Variables for Dark Theme - ResuMate Design */
 :root {
-  /* Colors - Deep black with premium cyan accents */
-  --bg: #000000;
-  --surface: #0A0A0A;
-  --card: #111111;
-  --border: rgba(0, 255, 255, 0.15);
-  --text: #FFFFFF;
-  --muted: rgba(229, 229, 229, 0.7);
-  --accent: #00FFFF;
-  --accent-dot: #14B8A6;
+  /* Colors - Near black with mint green accent */
+  --bg: hsl(0, 0%, 2%);
+  --surface: hsl(0, 0%, 6%);
+  --card: hsl(240, 3%, 7%);
+  --border: hsla(0, 0%, 100%, 0.04);
+  --text: hsl(0, 0%, 100%);
+  --muted: hsla(0, 0%, 100%, 0.6);
+  --accent: hsl(145, 80%, 52%);
+  --accent-dot: hsl(145, 75%, 50%);
   /* Project action specific color (different from --accent) */
   --project-action: #8B5CF6; /* purple */
   --input-bg: rgba(255,255,255,0.03);
@@ -562,6 +562,47 @@ body.light-theme .btn-accent:hover {
   font-size: 14px;
   color: var(--muted);
   font-weight: 500;
+}
+
+/* Stats Row */
+.stats-row {
+  display: flex;
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border);
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: var(--space-1);
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .stats-row {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .stat-value {
+    font-size: 22px;
+  }
 }
 
 /* Sections */
