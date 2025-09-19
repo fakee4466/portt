@@ -24,8 +24,8 @@
   --input-bg: rgba(255,255,255,0.03);
   --input-border: rgba(0, 255, 255, 0.2);
   --hover-bg: rgba(0, 255, 255, 0.08);
-  --shadow: 0 25px 60px rgba(0, 255, 255, 0.15);
-  --glow: 0 0 40px rgba(0, 255, 255, 0.3);
+  --shadow: 0 15px 35px rgba(0, 255, 255, 0.08);
+  --glow: 0 0 20px rgba(0, 255, 255, 0.1);
   --glass-bg: rgba(255, 255, 255, 0.02);
   --glass-border: rgba(255, 255, 255, 0.08);
   
@@ -57,23 +57,23 @@
 
 /* Light Theme Variables - Elegant Feminine Design */
 body.light-theme {
-  --bg: #FFFFFF;
+  --bg: #F8F1F4;
   --surface: #FFF8FB;
   --card: #FFFFFF;
-  --border: rgba(255, 105, 180, 0.2);
+  --border: rgba(139, 69, 92, 0.15);
   --text: #2A2A2A;
   --muted: rgba(42, 42, 42, 0.65);
-  --accent: #FF69B4;
-  --accent-dot: #FF1493;
+  --accent: #C2185B;
+  --accent-dot: #AD1457;
   --input-bg: #FFFAFD;
-  --input-border: rgba(255, 105, 180, 0.25);
-  --hover-bg: rgba(255, 105, 180, 0.06);
-  --shadow: 0 20px 40px rgba(255, 182, 193, 0.2);
-  --glow: 0 0 30px rgba(255, 105, 180, 0.25);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 105, 180, 0.15);
-  --gradient-primary: linear-gradient(135deg, #FF69B4, #FF1493);
-  --gradient-secondary: linear-gradient(135deg, #FFC0CB, #FF69B4);
+  --input-border: rgba(139, 69, 92, 0.2);
+  --hover-bg: rgba(139, 69, 92, 0.05);
+  --shadow: 0 15px 35px rgba(139, 69, 92, 0.15);
+  --glow: 0 0 20px rgba(139, 69, 92, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(139, 69, 92, 0.1);
+  --gradient-primary: linear-gradient(135deg, #C2185B, #AD1457);
+  --gradient-secondary: linear-gradient(135deg, #F8BBD9, #C2185B);
 }
 
 /* Base Styles */
@@ -264,8 +264,8 @@ body.light-theme *:focus-visible {
 }
 
 .profile-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow), var(--glow), 0 35px 80px rgba(0, 255, 255, 0.25);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow), var(--glow);
 }
 
 /* Light theme profile card */
@@ -280,7 +280,7 @@ body.light-theme .profile-card::before {
 }
 
 body.light-theme .profile-card:hover {
-  box-shadow: var(--shadow), var(--glow), 0 35px 80px rgba(255, 105, 180, 0.2);
+  box-shadow: var(--shadow), var(--glow);
 }
 
 .profile-image-container {
@@ -1728,5 +1728,92 @@ body.light-theme .skill-category-icon {
   .theme-icon {
     width: 16px;
     height: 16px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .portfolio-container {
+    padding: 40px 24px;
+    gap: var(--space-4);
+  }
+  
+  .profile-sidebar {
+    width: 320px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+  
+  .profile-sidebar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: var(--space-5);
+  }
+  
+  .main-content {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 16px;
+  }
+  
+  .profile-card {
+    padding: 20px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+  
+  .hero-description {
+    font-size: 15px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-actions {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-description {
+    font-size: 14px;
+  }
+  
+  .profile-name {
+    font-size: 24px;
+  }
+  
+  .social-links {
+    gap: 12px;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
   }
 }
