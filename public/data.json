@@ -1,0 +1,221 @@
+{
+  "profile": {
+    "name": "Sanskruti Mhatre",
+    "status": "Available for Work",
+    "titleLines": ["I'm Sanskruti Mhatre,", "Full Stack Developer", "DevOps & Cloud Enthusiast"],
+    "typingWords": ["Full Stack Developer", "DevOps & Cloud Enthusiast"],
+    "passionStatement": "Tech isn't just my career, it's my passion.",
+    "greeting": "Say Hello",
+    "resumeButtonText": "Resume",
+    "about": "I'm an IT professional who enjoys exploring, experimenting, and engineering solutions across multiple domains. Whether it's designing scalable applications, diving into AI/ML models, or optimizing system architectures, I bring a problem-solving mindset and a keen eye for innovation. My expertise spans software development, AI/ML, automation, and cloud technologies, allowing me to create tech solutions that are not only functional but also forward-thinking. I believe in the power of technology to drive change, enhance efficiency, and shape the future. Beyond code, I'm a tech enthusiast who loves learning, mentoring, and exploring how technology can shape a sustainable future. Whether it's developing a groundbreaking app or optimizing a system for efficiency, I bring passion and precision to every project. Let's Bring ideas to life through technology, innovation, and endless possibilities! 🚀✨",
+    "photo": "1.jpeg",
+    "social": [
+      { "name": "whatsapp", "url": "https://wa.me/919529412675", "aria": "WhatsApp", "displayText": "+91 9529412675" },
+      { "name": "email", "url": "mailto:mhatresanskruti42@gmail.com", "aria": "Email", "displayText": "mhatresanskruti42@gmail.com" },
+      { "name": "github", "url": "https://github.com/SanskrutiMhatre", "aria": "GitHub", "displayText": "github.com/SanskrutiMhatre" },
+      { "name": "linkedin", "url": "https://linkedin.com/in/SanskrutiMhatre", "aria": "LinkedIn", "displayText": "linkedin.com/in/SanskrutiMhatre" },
+      { "name": "instagram", "url": "https://instagram.com/sanskrutimhatre_", "aria": "Instagram", "displayText": "instagram.com/sanskrutimhatre_" },
+      { "name": "coffee", "url": "https://buymeacoffee.com/sanskrutimhatre", "aria": "Buy Me a Coffee", "displayText": "Support my work" }
+    ],
+    "cvUrl": "Resume.pdf"
+  },
+  "experience": [
+    {
+      "title": "Software Development Engineer - I",
+      "company": "Nexiaquest Ventures LLP",
+      "range": "June 2025 – Present",
+      "location": "Thane",
+      "description": "• Led development and deployment of scalable web applications using React.js, Node.js, and Express.js, ensuring performance and security across all releases.\n• Coordinated with cross-functional teams (designers, backend developers, and DevOps engineers) in an Agile environment, managing sprint planning and feature delivery to meet business objectives."
+    },
+    {
+      "title": "Software Developer Intern",
+      "company": "Talent Corner HR services Ltd",
+      "range": "May 2024 – October 2024",
+      "location": "Thane",
+      "description": "• Developed a job-matching web application that improved candidate-employer interaction and reduced manual outreach by 40%.\n• Integrated direct communication features (email, WhatsApp) to streamline hiring workflows."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Docker Lab",
+      "category": "Desktop Application",
+      "pages": "Docker, Kubernetes, React, Electron.js, Express.js, MongoDB",
+      "url": "https://github.com/SanskrutiMhatre/DockerLab",
+      "description": "• Developed a scalable container orchestration lab environment using Docker and Kubernetes, streamlining technical lab deployments across platforms for educational institutions.\n• **Copyright Registered** (Certificate No. SW-2025021405), Aug 2025 under Indian Copyright Act."
+    },
+    {
+      "title": "Manasheal – Mental Wellbeing Platform",
+      "category": "ML + Web Application",
+      "pages": "React, Firebase, Random Forest, Linear SVC",
+      "url": "https://github.com/SanskrutiMhatre/Manasheal-ml",
+      "description": "A platform to promote mental health awareness with tools for self‑assessment and emotional support using machine learning algorithms."
+    },
+    {
+      "title": "Group Expense Tracker",
+      "category": "Mobile Application",
+      "pages": "Java, Android Studio, SQLite, XML",
+      "url": "https://github.com/SanskrutiMhatre/GroupExpensesTracker",
+      "description": "An app for managing and sharing expenses within groups, supporting accurate tracking and fair cost distribution."
+    },
+    {
+      "title": "DigiTrust – Decentralized Identity System",
+      "category": "Web Application",
+      "pages": "React, Solidity, MetaMask, Ethers.js, Express.js, MongoDB",
+      "url": "https://github.com/SanskrutiMhatre/DigiTrust",
+      "description": "A decentralized identity verification system that lets users manage their digital identities securely on the blockchain, promoting transparency and ownership."
+    },
+    {
+      "title": "SAKHI APP – Menstrual Cycle Tracking",
+      "category": "Web Application",
+      "pages": "React, JavaScript, CSS, Local Storage API",
+      "url": "https://github.com/SanskrutiMhatre/Sakhi",
+      "description": "A user‑friendly app to track menstrual cycles, ovulation, and reproductive health for better personal care and planning."
+    },
+    {
+      "title": "JOB PORTAL",
+      "category": "Web Application",
+      "pages": "React, Node.js, Express, MongoDB, JWT",
+      "url": "https://github.com/SanskrutiMhatre/Talent_Corner-Job_Portal",
+      "description": "A job portal connecting job seekers and employers with features like job listings, company profiles, and application tools for efficient recruitment."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.E. Information Technology",
+      "institution": "A.P. Shah Institute Of Technology",
+      "range": "2022-2025",
+      "grade": "CGPA: 8.88",
+      "type": "bachelor"
+    },
+    {
+      "title": "Cybersecurity Honors",
+      "institution": "A.P. Shah Institute Of Technology",
+      "range": "2022-2025",
+      "grade": "CGPA: 8.50",
+      "type": "honors"
+    },
+    {
+      "title": "Diploma in Information Technology",
+      "institution": "Vidya Prasarak Mandal's Polytechnic",
+      "range": "2019-2022",
+      "grade": "Grade: 88.50%",
+      "type": "diploma"
+    }
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "skills": ["JavaScript", "Python", "Java", "C++"],
+      "color": "#3B82F6"
+    },
+    {
+      "title": "Web Development",
+      "skills": ["React.js", "Node.js", "Express.js", "HTML / CSS"],
+      "color": "#10B981"
+    },
+    {
+      "title": "APIs & Integration",
+      "skills": ["REST", "JWT", "OAuth 2.0"],
+      "color": "#8B5CF6"
+    },
+    {
+      "title": "Database & Backend Services",
+      "skills": ["MongoDB", "MySQL", "Firebase", "PostgreSQL"],
+      "color": "#F59E0B"
+    },
+    {
+      "title": "Cloud Platforms",
+      "skills": ["AWS", "Netlify", "DigitalOcean", "Vercel"],
+      "color": "#EF4444"
+    },
+    {
+      "title": "DevOps & Tools",
+      "skills": ["Git / GitHub", "Docker", "Kubernetes", "Jenkins"],
+      "color": "#6366F1"
+    }
+  ],
+  "social": {
+    "links": [
+      { "name": "github", "platform": "GitHub", "url": "https://github.com/SanskrutiMhatre", "icon": "github" },
+      { "name": "linkedin", "platform": "LinkedIn", "url": "https://linkedin.com/in/SanskrutiMhatre", "icon": "linkedin" },
+      { "name": "instagram", "platform": "Instagram", "url": "https://instagram.com/sanskrutimhatre_", "icon": "instagram" }
+    ],
+    "contact": [
+      { "name": "whatsapp", "platform": "WhatsApp", "url": "https://wa.me/919529412675", "icon": "whatsapp" },
+      { "name": "email", "platform": "Email", "url": "mailto:mhatresanskruti42@gmail.com", "icon": "email" },
+      { "name": "github", "platform": "GitHub", "url": "https://github.com/SanskrutiMhatre", "icon": "github" },
+      { "name": "linkedin", "platform": "LinkedIn", "url": "https://linkedin.com/in/SanskrutiMhatre", "icon": "linkedin" },
+      { "name": "instagram", "platform": "Instagram", "url": "https://instagram.com/sanskrutimhatre_", "icon": "instagram" },
+      { "name": "coffee", "platform": "Buy Me a Coffee", "url": "https://buymeacoffee.com/sanskrutimhatre", "icon": "coffee" }
+    ]
+  },
+  "footer": {
+    "builtBy": "Sanskruti",
+    "copyright": "© 2025-2026 Reserved."
+  },
+  "sectionTitles": {
+    "contact": "Let's Get in Touch!",
+    "projects": "Projects",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills & Technologies"
+  },
+  "contactForm": {
+    "labels": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "placeholders": {
+      "fullName": "Your Name",
+      "email": "johndoe@gmail.com",
+      "message": "Your message here..."
+    },
+    "buttons": {
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "messages": {
+      "success": "✅ Message sent successfully! I'll get back to you soon.",
+      "error": "❌ Failed to send message. Please try again or contact me directly."
+    }
+  },
+  "skillCategoryIcons": {
+    "programming languages": "Code2",
+    "web development": "Globe", 
+    "apis & integration": "Shield",
+    "database & backend services": "Database",
+    "cloud platforms": "Cloud",
+    "devops & tools": "WrenchIcon"
+  },
+  "socialPlatforms": {
+    "whatsapp": {
+      "displayName": "WhatsApp",
+      "iconType": "MessageCircle"
+    },
+    "email": {
+      "displayName": "Email", 
+      "iconType": "Mail"
+    },
+    "github": {
+      "displayName": "GitHub",
+      "iconType": "Github"
+    },
+    "linkedin": {
+      "displayName": "LinkedIn",
+      "iconType": "Linkedin"
+    },
+    "instagram": {
+      "displayName": "Instagram",
+      "iconType": "Instagram"
+    },
+    "coffee": {
+      "displayName": "Buy Me a Coffee",
+      "iconType": "Coffee"
+    }
+  },
+  "errorMessages": {
+    "loadingTitle": "Error loading portfolio data",
+    "unknownError": "Unknown error occurred"
+  }
+}
