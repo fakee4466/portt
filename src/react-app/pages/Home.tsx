@@ -15,9 +15,10 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="loading-screen">
-        <div className="loading-spinner">
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="flex flex-col items-center gap-4">
           <Loader2 className="w-10 h-10 animate-spin text-accent" />
+          <p className="text-muted-foreground">Loading portfolio...</p>
         </div>
       </div>
     );
@@ -25,29 +26,46 @@ export default function Home() {
 
   if (error || !data) {
     return (
-      <div className="error-screen">
-        <h1>{data?.errorMessages?.loadingTitle || 'Error loading portfolio data'}</h1>
-        <p>{error || data?.errorMessages?.unknownError || 'Unknown error occurred'}</p>
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center space-y-4">
+          <h1 className="text-2xl font-bold text-foreground">
+            {data?.errorMessages?.loadingTitle || 'Error loading portfolio data'}
+          </h1>
+          <p className="text-muted-foreground">
+            {error || data?.errorMessages?.unknownError || 'Unknown error occurred'}
+          </p>
+        </div>
       </div>
     );
   }
 
   return (
-    <>
+    <div className="min-h-screen bg-background">
       <ThemeToggle />
-      <div className="portfolio-container">
-        <ProfileCard profile={data.profile} />
+      <div className="portfolio-container lg:flex lg:gap-8 p-4 lg:p-8 max-w-7xl mx-auto">
+        <aside className="lg:sticky lg:top-8 lg:h-fit">
+          <ProfileCard profile={data.profile} />
+        </aside>
         
-        <main className="main-content">
+        <main className="flex-1 space-y-16 mt-8 lg:mt-0">
           <Hero profile={data.profile} />
-          <ExperienceSection experience={data.experience} sectionTitle={data.sectionTitles.experience} />
-          <ProjectsSection projects={data.projects} sectionTitle={data.sectionTitles.projects} />
-          <EducationSection education={data.education} sectionTitle={data.sectionTitles.education} />
-                <ToolsSection 
-        skills={data.skills} 
-        sectionTitle={data.sectionTitles.skills}
-        skillCategoryIcons={data.skillCategoryIcons}
-      />
+          <ExperienceSection 
+            experience={data.experience} 
+            sectionTitle={data.sectionTitles.experience} 
+          />
+          <ProjectsSection 
+            projects={data.projects} 
+            sectionTitle={data.sectionTitles.projects} 
+          />
+          <EducationSection 
+            education={data.education} 
+            sectionTitle={data.sectionTitles.education} 
+          />
+          <ToolsSection 
+            skills={data.skills} 
+            sectionTitle={data.sectionTitles.skills}
+            skillCategoryIcons={data.skillCategoryIcons}
+          />
           <ContactSection 
             social={data.social.contact} 
             sectionTitle={data.sectionTitles.contact} 
@@ -57,6 +75,6 @@ export default function Home() {
         </main>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
